@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form input {
+  filter: invert(85%);
+  padding: .5em 1em;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+form input:hover {
+  filter: invert(80%);
+}
+
+form input:not([type="submit"]) {
+  width: 250px;
+}
+
+small span {
+  color: var(--winter-sky);
+  cursor: pointer;
+}
