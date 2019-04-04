@@ -1,0 +1,23 @@
+:root {
+  /* colours */
+  --smoky-black: #0D0106;
+  --amaranth-purple: #A5265B;
+  --pale-violet-red: #D36593;
+  --winter-sky: #FF1E7C;
+  --snow: #FFF9FC;
+}
+
+body {
+  background-color: var(--smoky-black);
+  color: var(--snow);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: var(--pale-violet-red);
+}
+
+a {
+  color: var(--amaranth-purple);
+  text-decoration: none;
+}
