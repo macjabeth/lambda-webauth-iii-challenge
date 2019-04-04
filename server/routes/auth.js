@@ -10,12 +10,13 @@ const userDB = require('../models/users');
 const schema = Joi.object().keys({
   username: Joi.string().max(35).required(),
   password: Joi.string().max(128).required(),
-  department: Joi.string().max(50)
+  department: Joi.string().max(50).allow(null)
 });
 
 const generateToken = (user) => jwt.sign({
   subject: user.id,
-  username: user.username
+  username: user.username,
+  department: user.department
 }, secret, {
   expiresIn: '1d'
 });
@@ -45,7 +46,7 @@ router.post('/login', async ({ body: creds }, res) => {
 
   try {
     const { username, password } = creds;
-    const user = await userDB.findBy({ username });
+    const [user] = await userDB.findBy({ username });
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = generateToken(user);
       res.status(200).json({
