@@ -3,7 +3,7 @@ const casual = require('casual');
 const generateUser = () => ({
   username: casual.username,
   password: casual.password,
-  department: casual.letter
+  department: casual.letter.toLowerCase()
 });
 
 exports.seed = (knex) => knex('users').insert(
