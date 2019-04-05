@@ -17,6 +17,12 @@ h1 {
   color: var(--pale-violet-red);
 }
 
+h6 {
+  color: red;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
 a {
   color: var(--amaranth-purple);
   text-decoration: none;

@@ -12,11 +12,13 @@ const Navigation = ({ history }) => {
 
   return (
     <header>
-      <NavLink exact to="/">Home</NavLink>
-      <NavLink to="/users">Users</NavLink>
-      {token && (
-        <button onClick={handleLogout}>Logout</button>
-      )}
+      <nav>
+        <NavLink exact to="/">Home</NavLink>
+        <NavLink to="/users">Users</NavLink>
+        {token && (
+          <button onClick={handleLogout}>Logout</button>
+        )}
+      </nav>
     </header>
   );
 };
