@@ -6,7 +6,7 @@ const userDB = require('../models/users');
 
 router.get('/', restricted, async (req, res) => {
   try {
-    const department = req.decodedJwt && decodedJwt.department;
+    const department = req.decodedToken && req.decodedToken.department;
     if (department) {
       const users = await userDB.findBy({ department });
       res.status(200).json(users);

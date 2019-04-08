@@ -1,0 +1,16 @@
+header a {
+  font-size: 1.2em;
+  margin-right: 2em;
+}
+
+header a.active {
+  color: var(--winter-sky);
+}
+
+header button {
+  background-color: var(--smoky-black);
+  border: none;
+  color: yellow;
+  font-size: 1.2em;
+  cursor: pointer;
+}
